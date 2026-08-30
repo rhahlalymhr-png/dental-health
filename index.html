@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش سلامت دهان و دندان</title>
+    <style>
+        body { font-family: Tahoma, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; text-align: center; }
+        header { background: #00796b; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .buttons { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        button { padding: 15px; border: none; border-radius: 8px; background: #009688; color: white; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #004d40; }
+        #content-box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); min-height: 200px; text-align: right; }
+        h2 { color: #00796b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>آموزشگاه مجازی سلامت دهان</h1>
+    </header>
+
+    <div class="buttons">
+        <button onclick="showContent('bass')">تکنیک مسواک‌زدن باس (Bass Technique)</button>
+        <button onclick="showContent('interdental')">مسواک بین‌دندانی</button>
+        <button onclick="showContent('ortho')">مراقبت در ارتودنسی</button>
+    </div>
+
+    <div id="content-box">
+        <h2>به بخش آموزشی خوش آمدید</h2>
+        <p>لطفاً برای یادگیری نکات علمی دندانپزشکی، روی یکی از دکمه‌های بالا کلیک کنید.</p>
+    </div>
+
+    <script>
+        function showContent(topic) {
+            const box = document.getElementById('content-box');
+            if (topic === 'bass') {
+                box.innerHTML = '<h2>تکنیک باس</h2><p>این روش موثرترین راه برای حذف پلاک از خط لثه است. مسواک را با زاویه ۴۵ درجه نسبت به لثه قرار داده و با حرکت لرزشی ملایم بکشید.</p>';
+            } else if (topic === 'interdental') {
+                box.innerHTML = '<h2>مسواک بین‌دندانی</h2><p>استفاده از این مسواک‌ها برای کسانی که فاصله بین دندانی دارند ضروری است. به آرامی آن را بین دندان‌ها حرکت دهید تا پلاک‌های باقی‌مانده پاک شوند.</p>';
+            } else if (topic === 'ortho') {
+                box.innerHTML = '<h2>مراقبت‌های ارتودنسی</h2><p>در زمان ارتودنسی، حتما از مسواک‌های مخصوص (V-shape) و نخ‌دندان‌های سوپرفلاس استفاده کنید تا از پوسیدگی اطراف براکت‌ها جلوگیری شود.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
